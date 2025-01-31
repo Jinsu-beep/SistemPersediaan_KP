@@ -42,7 +42,6 @@ class AdminController extends Controller
         }
         
         $tuser = AdminModel::with('jabatan', 'unit', 'opd')->get();
-        //dd($tuser);
 
         return view("Admin.Tambah-User.show", compact("periodeAktif", "tuser"));
     }
